@@ -1,0 +1,19 @@
+{
+  "name": "social media dashboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass scss/main.scss css/style.css -w",
+    "comp:sass": "node-sass scss/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css",
+    "prefix:css": "postcss-cli --use autoprefixer -b style.concat.css -o style.prefix.css"
+  },
+  "author": "tomthestrom",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "concat": "^1.0.3",
+    "node-sass": "^5.0.0",
+    "postcss-cli": "^8.3.1"
+  }
+}
