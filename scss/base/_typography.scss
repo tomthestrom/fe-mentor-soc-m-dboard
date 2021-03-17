@@ -1,0 +1,22 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    color: var(--color-background)
+}
+
+.heading-primary {
+    font-size: 2.4rem;
+}
+.heading-secondary {
+    color: hsl(228,12%,44%)
+}
+.heading-secondary--total {
+    font-size: 1.4rem;
+}
+
+.heading-secondary--today {
+    font-size: 2.4rem;
+    margin-bottom: 2.7rem;
+}

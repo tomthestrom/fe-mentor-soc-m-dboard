@@ -1,11 +1,11 @@
 {
-  "name": "social media dashboard",
+  "name": "social-media-dashboard",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass scss/main.scss css/style.css -w",
-    "comp:sass": "node-sass scss/main.scss css/style.comp.css",
-    "concat:css": "concat -o css/style.concat.css css/style.comp.css",
+    "watch:sass": "node-sass scss/main.scss style.css -w",
+    "comp:sass": "node-sass scss/main.scss style.css",
+    "concat:css": "concat -o css/style.concat.css css/style.css",
     "prefix:css": "postcss-cli --use autoprefixer -b style.concat.css -o style.prefix.css"
   },
   "author": "tomthestrom",

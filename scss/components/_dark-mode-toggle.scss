@@ -1,0 +1,14 @@
+.dark-mode {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    &__text {
+        font-weight: bold;
+        color: hsl(228,12%,44%);
+        margin-right: auto;
+    }
+
+    &__button {
+
+    }
+}

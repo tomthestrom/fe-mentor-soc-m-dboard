@@ -1,0 +1,155 @@
+:root {
+  --color-background: hsl(0, 0, 100%);
+  --color-card-background: hsl(227, 47%, 96%);
+  --color-lime-green: hsl(163, 72%, 41%);
+  --color-bright-red: hsl(356, 69%, 56%);
+  --color-facebook: hsl(208, 92%, 53%);
+  --color-twitter: hsl(203, 89%, 53%);
+  --color-insta: linear-gradient(225deg, #DF4896 0%, #EE877E 50.91%, #FDC366 100%);
+  --color-youtube: hsl(348, 97%, 39%); }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.main {
+  padding: 3.6rem 2.4rem 4.5rem 2.5rem; }
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  color: var(--color-background); }
+
+.heading-primary {
+  font-size: 2.4rem; }
+
+.heading-secondary {
+  color: #63687e; }
+
+.heading-secondary--total {
+  font-size: 1.4rem; }
+
+.heading-secondary--today {
+  font-size: 2.4rem;
+  margin-bottom: 2.7rem; }
+
+.dark-mode {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem; }
+  .dark-mode__text {
+    font-weight: bold;
+    color: #63687e;
+    margin-right: auto; }
+
+.followers {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .followers__amount {
+    font-size: 5.6rem;
+    letter-spacing: -.036em;
+    line-height: 4.8rem;
+    margin-bottom: .9rem; }
+  .followers__label {
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .4166em;
+    margin-right: -.4166em;
+    color: #63687e; }
+
+.media-today {
+  position: relative;
+  background-color: #f0f2fa;
+  height: 12.5rem;
+  padding: 2.6rem 3rem 2.4rem 2.4rem;
+  margin-bottom: 1.6rem; }
+  .media-today__heading {
+    font-size: 1.4rem;
+    color: #63687e;
+    position: absolute;
+    top: 2.7rem;
+    left: 2.4rem; }
+  .media-today__amount {
+    font-size: 3.2rem;
+    position: absolute;
+    left: 2.4rem;
+    bottom: 1.9rem; }
+  .media-today .social-icon {
+    position: absolute;
+    top: 2.6rem;
+    right: 3.1rem; }
+  .media-today .trend {
+    position: absolute;
+    right: 3rem;
+    bottom: 2.4rem; }
+
+.media-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 21.6rem;
+  width: 100%;
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  margin-bottom: 2.4rem; }
+  .media-total--facebook {
+    border-top: 4px solid var(--color-facebook); }
+  .media-total--twitter {
+    border-top: 4px solid var(--color-twitter); }
+  .media-total--instagram {
+    border-top: 4px solid;
+    border-image-slice: 1;
+    border-image-source: var(--color-insta); }
+  .media-total--youtube {
+    border-top: 4px solid var(--color-youtube); }
+  .media-total__heading {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #63687e;
+    margin-bottom: 2.8rem; }
+  .media-total .social-icon {
+    margin-right: .8rem; }
+  .media-total .followers {
+    margin-bottom: 2.5rem; }
+
+.social-icon {
+  height: 2rem;
+  width: 2rem; }
+
+.trend {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold; }
+  .trend--positive {
+    color: var(--color-lime-green); }
+  .trend--negative {
+    color: var(--color-bright-red); }
+  .trend__icon {
+    height: 0.4rem;
+    width: 0.8rem;
+    margin-right: 0.4rem; }
+
+.header {
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid #848BAB;
+  margin-bottom: 1.6rem; }
+
+.total {
+  display: flex;
+  flex-wrap: wrap; }

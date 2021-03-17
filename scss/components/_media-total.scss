@@ -1,0 +1,49 @@
+.media-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 21.6rem;
+    width: 100%;
+
+    background-color: hsl(227, 47%, 96%);
+
+    border-radius: 5px;
+    margin-bottom: 2.4rem;
+
+    &--facebook {
+    border-top: 4px solid var(--color-facebook);
+    }
+
+    &--twitter {
+    border-top: 4px solid var(--color-twitter);
+    }
+
+    &--instagram {
+        border-top: 4px solid;
+        border-image-slice: 1;
+        border-image-source: var(--color-insta);
+    }
+
+    &--youtube {
+    border-top: 4px solid var(--color-youtube);
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+
+        color: hsl(228, 12%, 44%);
+
+        margin-bottom: 2.8rem;
+    }
+
+    .social-icon {
+        margin-right: .8rem;
+    }
+
+    .followers {
+        margin-bottom: 2.5rem;
+    }
+}
