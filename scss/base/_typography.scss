@@ -19,4 +19,8 @@ body {
 .heading-secondary--today {
     font-size: 2.4rem;
     margin-bottom: 2.7rem;
+
+    @include respond (desktop) {
+        margin-bottom: 2.4rem;
+    }
 }

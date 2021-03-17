@@ -1,0 +1,11 @@
+.today {
+
+    @include respond(mob-land) {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > * {
+        margin-bottom: 2.4rem;
+        }
+    }
+}

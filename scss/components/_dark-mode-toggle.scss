@@ -2,10 +2,23 @@
     display: flex;
     align-items: center;
     margin-bottom: 4rem;
+
+    @include respond(desktop) {
+        position: absolute;
+        top: 3.6rem;
+        right: 0;
+        margin: 0;
+    }
+
     &__text {
         font-weight: bold;
         color: hsl(228,12%,44%);
         margin-right: auto;
+
+    @include respond(desktop) {
+        margin-right: 1.2rem;
+    }
+
     }
 
     &__btn {
@@ -55,7 +68,7 @@
                height: 100%;
                width: 100%;
                background: linear-gradient(225deg, #40DB82 0%, #388FE7 98.02%);
-               animation:  fill-mode-toggle-btn .3s ease-out;
+               animation:  fill-mode-toggle-btn .1s ease-out;
             }
         }
 

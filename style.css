@@ -1,3 +1,18 @@
+/*
+Breakpoints based on design (one card (media-today or media-total has the width of 255px on dsktp dsgn)
+0 - 540px phone
+540px - 825px phone landscape
+825px - 1159px tablet 
+1159px < desktop
+
+*/
+/*
+$breakpoint argument choices:
+-mob-land
+-tablet
+-desktop
+
+*/
 :root {
   --color-background: hsl(0, 0, 100%);
   --color-card-background: hsl(227, 47%, 96%);
@@ -23,6 +38,13 @@ body {
 
 .main {
   padding: 3.6rem 2.4rem 4.5rem 2.5rem; }
+  @media (min-width: 72.4375em) {
+    .main {
+      padding-right: 0;
+      padding-left: 0;
+      width: 111rem;
+      margin: 0 auto;
+      position: relative; } }
 
 body {
   font-family: "Inter", sans-serif;
@@ -43,15 +65,27 @@ body {
 .heading-secondary--today {
   font-size: 2.4rem;
   margin-bottom: 2.7rem; }
+  @media (min-width: 72.4375em) {
+    .heading-secondary--today {
+      margin-bottom: 2.4rem; } }
 
 .dark-mode {
   display: flex;
   align-items: center;
   margin-bottom: 4rem; }
+  @media (min-width: 72.4375em) {
+    .dark-mode {
+      position: absolute;
+      top: 3.6rem;
+      right: 0;
+      margin: 0; } }
   .dark-mode__text {
     font-weight: bold;
     color: #63687e;
     margin-right: auto; }
+    @media (min-width: 72.4375em) {
+      .dark-mode__text {
+        margin-right: 1.2rem; } }
   .dark-mode__btn-container {
     position: relative;
     width: 4.8rem;
@@ -89,7 +123,7 @@ body {
     height: 100%;
     width: 100%;
     background: linear-gradient(225deg, #40DB82 0%, #388FE7 98.02%);
-    animation: fill-mode-toggle-btn .3s ease-out; }
+    animation: fill-mode-toggle-btn .1s ease-out; }
   .dark-mode__btn-checkbox {
     position: absolute;
     top: 50%;
@@ -134,6 +168,16 @@ body {
   height: 12.5rem;
   border-radius: 5px;
   margin-bottom: 1.6rem; }
+  @media (min-width: 38.6875em) {
+    .media-today {
+      width: calc(50% - 1.5rem); }
+      .media-today:nth-child(odd) {
+        margin-right: 3rem; } }
+  @media (min-width: 72.4375em) {
+    .media-today {
+      width: 25.5rem; }
+      .media-today:not(:nth-child(4n)) {
+        margin-right: 3rem; } }
   .media-today__heading {
     font-size: 1.4rem;
     color: #63687e;
@@ -164,14 +208,33 @@ body {
   background-color: #f0f2fa;
   border-radius: 5px;
   margin-bottom: 2.4rem; }
+  @media (min-width: 38.6875em) {
+    .media-total {
+      width: calc(50% - 1.5rem); }
+      .media-total:nth-child(odd) {
+        margin-right: 3rem; } }
+  @media (min-width: 72.4375em) {
+    .media-total {
+      width: 25.5rem;
+      margin-bottom: 0; }
+      .media-total:not(:last-child) {
+        margin-right: 3rem; } }
   .media-total--facebook {
     border-top: 4px solid var(--color-facebook); }
   .media-total--twitter {
     border-top: 4px solid var(--color-twitter); }
   .media-total--instagram {
-    border-top: 4px solid;
-    border-image-slice: 1;
-    border-image-source: var(--color-insta); }
+    position: relative; }
+    .media-total--instagram:after {
+      position: absolute;
+      top: 0;
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-image: var(--color-insta);
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
   .media-total--youtube {
     border-top: 4px solid var(--color-youtube); }
   .media-total__heading {
@@ -207,7 +270,21 @@ body {
   padding-bottom: 2.4rem;
   border-bottom: 1px solid #848BAB;
   margin-bottom: 1.6rem; }
+  @media (min-width: 72.4375em) {
+    .header {
+      position: relative;
+      padding: 0;
+      border: none;
+      margin-bottom: 4.6rem; } }
 
 .total {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 4.6rem; }
+
+@media (min-width: 38.6875em) {
+  .today {
+    display: flex;
+    flex-wrap: wrap; }
+    .today > * {
+      margin-bottom: 2.4rem; } }

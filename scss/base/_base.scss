@@ -16,4 +16,14 @@ body {
 
 .main {
     padding: 3.6rem 2.4rem 4.5rem 2.5rem;
+
+    @include respond(desktop) {
+        //#px perfect :D
+        padding-right: 0;
+        padding-left: 0;
+        width: 111rem;
+        margin: 0 auto;
+
+        position: relative;
+    }
 }
