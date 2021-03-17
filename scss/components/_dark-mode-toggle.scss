@@ -8,7 +8,71 @@
         margin-right: auto;
     }
 
-    &__button {
+    &__btn {
+        &-container {
+            position: relative;
+           width: 4.8rem;
+           height: 2.4rem;
+        }
 
+        &-toggle {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #AEB3CB;;
+            border-radius: 1.2rem;
+
+            &:before {
+                position: absolute;
+                float:right;
+                top: 25%;
+                right: 0;
+               content: "";
+               height: 5%;
+               width: 0%;
+               border-radius: 1.2rem;
+               background: linear-gradient(225deg, #40DB82 0%, #388FE7 98.02%);
+            }
+           
+           &:after {
+               position: absolute;
+               top: .3rem;
+               right: .4rem;
+               display: inline-block;
+               content: "";
+               height: 1.8rem;
+               width: 1.8rem;
+               border-radius: 50%;
+               background: #fff;
+           }
+        }
+
+        &-toggle:hover {
+            &:before {
+                top: 0;
+               display: inline-block;
+               content: "";
+               height: 100%;
+               width: 100%;
+               background: linear-gradient(225deg, #40DB82 0%, #388FE7 98.02%);
+               animation:  fill-mode-toggle-btn .3s ease-out;
+            }
+        }
+
+        &-checkbox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1; 
+        }
     }
+}
+
+
+@keyframes fill-mode-toggle-btn {
+  0% { height: 0; width: 0}
+  39% { height: 0; width: 0}
+  40% { height: 100%; width: 40% }
+  100% { height: 100%; width: 100% }
 }
