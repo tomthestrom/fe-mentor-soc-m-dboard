@@ -125,7 +125,7 @@ body {
   @media (min-width: 72.4375em) {
     .dark-mode {
       position: absolute;
-      top: 4rem;
+      top: 4.5rem;
       right: 0;
       margin: 0; } }
   .dark-mode__text {
