@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://tomthestrom-soc-m-dashboard.herokuapp.com/](https://tomthestrom-soc-m-dashboard.herokuapp.com/)
 
 ## My process
 
@@ -46,4 +46,4 @@ Users should be able to:
 ## Run the project
 
 1. Clone the repo and type `npm install`
-2. To generate the *CSS*, type `npm run start`
+2. To generate the *CSS*, type `npm run comp:sass`
