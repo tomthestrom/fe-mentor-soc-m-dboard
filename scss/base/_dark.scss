@@ -1,0 +1,61 @@
+body {
+  &.dark {
+    background-color: var(--color-background--dark);
+
+    .main .heading-primary {
+      color: var(--color-white);
+    }
+
+    .main .header {
+      border-bottom: var(--header-border-style--dark);
+
+      @include respond(desktop) {
+        border: none;
+      }
+    }
+
+    .main .dark-mode {
+      &__toggle-container:hover + .dark-mode__text {
+        color: var(--color-white);
+      }
+    }
+
+    .main .total .media-total {
+      background-color: var(--color-card-background--dark);
+
+      .followers {
+        &__amount {
+          color: var(--color-white);
+        }
+
+        &__label {
+          color: var(--color-followers--dark);
+        }
+      }
+
+      &:hover {
+        background-color: var(--color-card-background--hover--dark);
+      }
+    }
+
+    .main .today .media-today {
+      background-color: var(--color-card-background--dark);
+
+      &__heading {
+        color: inherit;
+      }
+
+      &__amount {
+        color: var(--color-white);
+      }
+
+      &:hover {
+        background-color: var(--color-card-background--hover--dark);
+      }
+    }
+
+    .main .heading-secondary--today {
+      color: var(--color-white);
+    }
+  }
+}

@@ -1,12 +1,12 @@
 .header {
-    padding-bottom: 2.4rem;
-    border-bottom: 1px solid #848BAB;
-    margin-bottom: 1.6rem;
+  padding-bottom: 2.4rem;
+  border-bottom: var(--header-border-style);
+  margin-bottom: 1.6rem;
 
-    @include respond(desktop) {
-        position: relative;
-        padding: 0;
-        border: none;
-        margin-bottom: 4.6rem;
-    }
+  @include respond(desktop) {
+    position: relative;
+    padding: 0;
+    border: none;
+    margin-bottom: 4.6rem;
+  }
 }

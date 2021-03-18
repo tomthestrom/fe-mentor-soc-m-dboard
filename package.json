@@ -3,17 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node-sass scss/main.scss style.css",
     "watch:sass": "node-sass scss/main.scss style.css -w",
-    "comp:sass": "node-sass scss/main.scss style.css",
-    "concat:css": "concat -o css/style.concat.css css/style.css",
-    "prefix:css": "postcss-cli --use autoprefixer -b style.concat.css -o style.prefix.css"
+    "comp:sass": "node-sass scss/main.scss style.css"
   },
   "author": "tomthestrom",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "concat": "^1.0.3",
-    "node-sass": "^5.0.0",
-    "postcss-cli": "^8.3.1"
+    "node-sass": "^5.0.0"
   }
 }

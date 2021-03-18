@@ -2,37 +2,25 @@
 
 /*
 Breakpoints based on design (one card (media-today or media-total has the width of 255px on dsktp dsgn)
-0 - 540px phone
-540px - 825px phone landscape
-825px - 1159px tablet 
-1159px < desktop
-
 */
 
 /*
 $breakpoint argument choices:
 -mob-land
--tablet
 -desktop
 
 */
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == mob-land {
-        //540px
-        @media (min-width: 38.6875em) {
-            @content
-        }
+  @if $breakpoint == mob-land {
+    @media (min-width: 38.6875em) {
+      @content;
     }
+  }
 
-    @if $breakpoint == tablet {
-        @media (min-width: 51.5625em) {
-            @content
-        }
+  @if $breakpoint == desktop {
+    @media (min-width: 72.4375em) {
+      @content;
     }
-    @if $breakpoint == desktop {
-        @media (min-width: 72.4375em) {
-            @content
-        }
-    }
+  }
 }

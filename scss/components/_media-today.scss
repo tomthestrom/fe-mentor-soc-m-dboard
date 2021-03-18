@@ -1,49 +1,55 @@
 .media-today {
-    position: relative;
-    background-color: hsl(227, 47%, 96%);
-    height: 12.5rem;
-    border-radius: 5px;
-    margin-bottom: 1.6rem;
+  position: relative;
+  background-color: hsl(227, 47%, 96%);
+  height: 12.5rem;
+  border-radius: 5px;
+  margin-bottom: 1.6rem;
+  cursor: pointer;
 
-    @include respond (mob-land) {
-        //1.5rem == half of mgright
-        width: calc(50% - 1.5rem);
-        &:nth-child(odd) {
-            margin-right: 3rem;
-        }
+  @include respond(mob-land) {
+    //1.5rem == half of mgright
+    width: calc(50% - 1.5rem);
+    &:nth-child(odd) {
+      margin-right: 3rem;
     }
+  }
 
-    @include respond (desktop) {
-        width: 25.5rem;
-        &:not(:nth-child(4n)) {
-            margin-right: 3rem;
-        }
+  @include respond(desktop) {
+    width: 25.5rem;
+    &:not(:nth-child(4n)) {
+      margin-right: 3rem;
     }
+  }
 
-    &__heading {
-        font-size: 1.4rem;
-        color: hsl(228, 12%, 44%);
-        position: absolute;
-        top: 2.7rem;
-        left: 2.4rem;
-    }
+  &__heading {
+    font-size: 1.4rem;
+    color: inherit;
+    position: absolute;
+    top: 2.7rem;
+    left: 2.4rem;
+  }
 
-    &__amount {
-        font-size: 3.2rem;
-        position: absolute;
-        left: 2.4rem;
-        bottom: 1.9rem;
-    }
+  &__amount {
+    font-size: 3.2rem;
+    color: var(--color-font-secondary);
+    position: absolute;
+    left: 2.4rem;
+    bottom: 1.9rem;
+  }
 
-    .social-icon {
-        position: absolute;
-        top: 2.6rem;
-        right: 3.1rem;
-    }
-    
-    .trend {
-        position: absolute;
-        right: 3rem;
-        bottom: 2.4rem;
-    }
+  .social-icon {
+    position: absolute;
+    top: 2.6rem;
+    right: 3.1rem;
+  }
+
+  .trend {
+    position: absolute;
+    right: 3rem;
+    bottom: 2.4rem;
+  }
+
+  &:hover {
+    background-color: var(--color-card-background--hover);
+  }
 }

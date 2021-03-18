@@ -1,318 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Social Media Dashboard</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | [Social Media Dashboard]</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
-</head>
-
-<body>
-  <main class="main">
-    <header class="header">
-      <h1 class="heading-primary">
-        Social Media Dashboard
-      </h1>
-      <h2 class="heading-secondary heading-secondary--total">
-        Total Followers: <span class="total-followers">
-          23,004
-        </span>
-      </h2>
-    </header>
-    <div class="dark-mode">
-      <span class="dark-mode__text">
-        Dark Mode
-      </span>
-      <div class="dark-mode__btn-container">
-        <input class="dark-mode__btn-checkbox" type="checkbox" name="dark-mode-toggle" id="dark-mode-toggle">
-        <label class="dark-mode__btn-toggle" for="dark-mode-toggle"></label>
+  <body>
+    <main class="main">
+      <header class="header">
+        <h1 class="heading-primary">Social Media Dashboard</h1>
+        <h2 class="heading-secondary heading-secondary--total">
+          Total Followers: <span class="total-followers"> 23,004 </span>
+        </h2>
+      </header>
+      <div class="dark-mode">
+        <div class="dark-mode__toggle-container">
+          <input
+            class="dark-mode__toggle-checkbox"
+            type="checkbox"
+            name="dark-mode-toggle"
+            id="dark-mode-toggle"
+          />
+          <label class="dark-mode__toggle-label" for="dark-mode-toggle"></label>
+        </div>
+        <span class="dark-mode__text"> Dark Mode </span>
       </div>
+      <section class="total">
+        <article class="media-total media-total--facebook">
+          <h3 class="media-total__heading">
+            <object
+              class="social-icon"
+              type="image/svg+xml"
+              data="images/icon-facebook.svg"
+            >
+              Facebook Icon
+            </object>
+            @nathanf
+          </h3>
+          <strong class="followers">
+            <span class="followers__amount"> 1987 </span>
+            <span class="followers__label"> Followers </span>
+          </strong>
+          <div class="trend trend--positive">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-up.svg"
+            >
+              Trend positive
+            </object>
+            12 Today
+          </div>
+        </article>
+        <article class="media-total media-total--twitter">
+          <h3 class="media-total__heading">
+            <object
+              class="social-icon"
+              type="image/svg+xml"
+              data="images/icon-twitter.svg"
+            >
+              Twitter Icon
+            </object>
+            @nathanf
+          </h3>
+          <strong class="followers">
+            <span class="followers__amount"> 1044 </span>
+            <span class="followers__label"> Followers </span>
+          </strong>
+          <div class="trend trend--positive">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-up.svg"
+            >
+              Trend positive
+            </object>
+            99 Today
+          </div>
+        </article>
+        <article class="media-total media-total--instagram">
+          <h3 class="media-total__heading">
+            <object
+              class="social-icon"
+              type="image/svg+xml"
+              data="images/icon-instagram.svg"
+            >
+              Instagram Icon
+            </object>
+            @realnathanf
+          </h3>
+          <strong class="followers">
+            <span class="followers__amount"> 11k </span>
+            <span class="followers__label"> Followers </span>
+          </strong>
+          <div class="trend trend--positive">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-up.svg"
+            >
+              Trend positive
+            </object>
+            1099 Today
+          </div>
+        </article>
+        <article class="media-total media-total--youtube">
+          <h3 class="media-total__heading">
+            <object
+              class="social-icon"
+              type="image/svg+xml"
+              data="images/icon-youtube.svg"
+            >
+              Youtube Icon
+            </object>
+            Nathan F.
+          </h3>
+          <strong class="followers">
+            <span class="followers__amount"> 8239 </span>
+            <span class="followers__label"> Subscribers </span>
+          </strong>
+          <div class="trend trend--negative">
+            <object
+              class="trend__icon trend__icon--negative"
+              type="image/svg+xml"
+              data="images/icon-down.svg"
+            >
+              Trend negative
+            </object>
+            144 Today
+          </div>
+        </article>
+      </section>
+      <h2 class="heading-secondary heading-secondary--today">
+        Overview - Today
+      </h2>
+      <section class="today">
+        <article class="media-today">
+          <h3 class="media-today__heading">Page Views</h3>
+          <object
+            class="social-icon"
+            type="image/svg+xml"
+            data="images/icon-facebook.svg"
+          >
+            Icon Facebook
+          </object>
+          <strong class="media-today__amount"> 87 </strong>
+
+          <div class="trend trend--positive">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-up.svg"
+            >
+              Trend positive
+            </object>
+            3%
+          </div>
+        </article>
+
+        <article class="media-today">
+          <h3 class="media-today__heading">Likes</h3>
+          <object
+            class="social-icon"
+            type="image/svg+xml"
+            data="images/icon-facebook.svg"
+          >
+            Icon Facebook
+          </object>
+          <strong class="media-today__amount"> 52 </strong>
+
+          <div class="trend trend--negative">
+            <object
+              class="trend__icon trend__icon--negative"
+              type="image/svg+xml"
+              data="images/icon-down.svg"
+            >
+              Trend negative
+            </object>
+            2%
+          </div>
+        </article>
+
+        <article class="media-today">
+          <h3 class="media-today__heading">Likes</h3>
+          <object
+            class="social-icon"
+            type="image/svg+xml"
+            data="images/icon-instagram.svg"
+          >
+            Icon Facebook
+          </object>
+          <strong class="media-today__amount"> 5462 </strong>
+
+          <div class="trend trend--positive">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-up.svg"
+            >
+              Trend positive
+            </object>
+            2257%
+          </div>
+        </article>
+
+        <article class="media-today">
+          <h3 class="media-today__heading">Profile Views</h3>
+          <object
+            class="social-icon"
+            type="image/svg+xml"
+            data="images/icon-instagram.svg"
+          >
+            Icon Facebook
+          </object>
+          <strong class="media-today__amount"> 52k </strong>
+
+          <div class="trend trend--positive">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-up.svg"
+            >
+              Trend positive
+            </object>
+            1375%
+          </div>
+        </article>
+
+        <article class="media-today">
+          <h3 class="media-today__heading">Retweets</h3>
+          <object
+            class="social-icon"
+            type="image/svg+xml"
+            data="images/icon-twitter.svg"
+          >
+            Icon Facebook
+          </object>
+          <strong class="media-today__amount"> 117 </strong>
+
+          <div class="trend trend--positive">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-up.svg"
+            >
+              Trend positive
+            </object>
+            303%
+          </div>
+        </article>
+
+        <article class="media-today">
+          <h3 class="media-today__heading">Likes</h3>
+          <object
+            class="social-icon"
+            type="image/svg+xml"
+            data="images/icon-twitter.svg"
+          >
+            Icon Facebook
+          </object>
+          <strong class="media-today__amount"> 507 </strong>
+
+          <div class="trend trend--positive">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-up.svg"
+            >
+              Trend positive
+            </object>
+            553%
+          </div>
+        </article>
+
+        <article class="media-today">
+          <h3 class="media-today__heading">Likes</h3>
+          <object
+            class="social-icon"
+            type="image/svg+xml"
+            data="images/icon-youtube.svg"
+          >
+            Icon Facebook
+          </object>
+          <strong class="media-today__amount"> 107 </strong>
+
+          <div class="trend trend--negative">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-down.svg"
+            >
+              Trend negative
+            </object>
+            19%
+          </div>
+        </article>
+
+        <article class="media-today">
+          <h3 class="media-today__heading">Total Views</h3>
+          <object
+            class="social-icon"
+            type="image/svg+xml"
+            data="images/icon-youtube.svg"
+          >
+            Icon Facebook
+          </object>
+          <strong class="media-today__amount"> 1407 </strong>
+
+          <div class="trend trend--negative">
+            <object
+              class="trend__icon trend__icon--positive"
+              type="image/svg+xml"
+              data="images/icon-down.svg"
+            >
+              Trend negative
+            </object>
+            12%
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/tomthestrom"
+        target="_blank"
+        >tomthestrom</a
+      >.
     </div>
-    <section class="total">
-      <article class="media-total media-total--facebook">
-        <h3 class="media-total__heading">
-          <object class="social-icon" type="image/svg+xml" data="images/icon-facebook.svg">
-            Facebook Icon
-          </object>
-          @nathanf
-        </h3>
-        <strong class="followers">
-          <span class="followers__amount">
-            1987
-          </span>
-          <span class="followers__label">
-            Followers
-          </span>
-        </strong>
-        <div class="trend trend--positive">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-up.svg">
-            Trend positive
-          </object>
-          12 Today
-        </div>
-      </article>
-      <article class="media-total media-total--twitter">
-        <h3 class="media-total__heading">
-          <object class="social-icon" type="image/svg+xml" data="images/icon-twitter.svg">
-            Twitter Icon
-          </object>
-          @nathanf
-        </h3>
-        <strong class="followers">
-          <span class="followers__amount">
-            1044
-          </span>
-          <span class="followers__label">
-            Followers
-          </span>
-        </strong>
-        <div class="trend trend--positive">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-up.svg">
-            Trend positive
-          </object>
-          99 Today
-        </div>
-      </article>
-      <article class="media-total media-total--instagram">
-        <h3 class="media-total__heading">
-          <object class="social-icon" type="image/svg+xml" data="images/icon-instagram.svg">
-            Instagram Icon
-          </object>
-          @realnathanf
-        </h3>
-        <strong class="followers">
-          <span class="followers__amount">
-            11k
-          </span>
-          <span class="followers__label">
-            Followers
-          </span>
-        </strong>
-        <div class="trend trend--positive">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-up.svg">
-            Trend positive
-          </object>
-          1099 Today
-        </div>
-      </article>
-      <article class="media-total media-total--youtube">
-        <h3 class="media-total__heading">
-          <object class="social-icon" type="image/svg+xml" data="images/icon-youtube.svg">
-            Youtube Icon
-          </object>
-          Nathan F.
-        </h3>
-        <strong class="followers">
-          <span class="followers__amount">
-            8239
-          </span>
-          <span class="followers__label">
-            Subscribers
-          </span>
-        </strong>
-        <div class="trend trend--negative">
-          <object class="trend__icon trend__icon--negative" type="image/svg+xml" data="images/icon-down.svg">
-            Trend negative
-          </object>
-          144 Today
-        </div>
-      </article>
-    </section>
-    <h2 class="heading-secondary heading-secondary--today">
-      Overview - Today
-    </h2>
-    <section class="today">
-
-      <article class="media-today">
-        <h3 class="media-today__heading">
-
-          Page Views
-        </h3>
-        <object class="social-icon" type="image/svg+xml" data="images/icon-facebook.svg">
-          Icon Facebook
-        </object>
-        <strong class="media-today__amount">
-
-          87
-        </strong>
-
-        <div class="trend trend--positive">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-up.svg">
-            Trend positive
-          </object>
-          3%
-        </div>
-      </article>
-
-
-      <article class="media-today">
-        <h3 class="media-today__heading">
-
-          Likes
-        </h3>
-        <object class="social-icon" type="image/svg+xml" data="images/icon-facebook.svg">
-          Icon Facebook
-        </object>
-        <strong class="media-today__amount">
-
-          52
-        </strong>
-
-        <div class="trend trend--negative">
-          <object class="trend__icon trend__icon--negative" type="image/svg+xml" data="images/icon-down.svg">
-            Trend negative
-          </object>
-          2%
-        </div>
-      </article>
-
-      <article class="media-today">
-        <h3 class="media-today__heading">
-
-          Likes
-        </h3>
-        <object class="social-icon" type="image/svg+xml" data="images/icon-instagram.svg">
-          Icon Facebook
-        </object>
-        <strong class="media-today__amount">
-
-          5462
-        </strong>
-
-        <div class="trend trend--positive">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-up.svg">
-            Trend positive
-          </object>
-          2257%
-        </div>
-      </article>
-
-      <article class="media-today">
-        <h3 class="media-today__heading">
-
-          Profile Views
-        </h3>
-        <object class="social-icon" type="image/svg+xml" data="images/icon-instagram.svg">
-          Icon Facebook
-        </object>
-        <strong class="media-today__amount">
-
-          52k
-        </strong>
-
-        <div class="trend trend--positive">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-up.svg">
-            Trend positive
-          </object>
-          1375%
-        </div>
-      </article>
-
-      <article class="media-today">
-        <h3 class="media-today__heading">
-
-          Retweets
-        </h3>
-        <object class="social-icon" type="image/svg+xml" data="images/icon-twitter.svg">
-          Icon Facebook
-        </object>
-        <strong class="media-today__amount">
-
-          117
-        </strong>
-
-        <div class="trend trend--positive">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-up.svg">
-            Trend positive
-          </object>
-          303%
-        </div>
-      </article>
-
-      <article class="media-today">
-        <h3 class="media-today__heading">
-
-          Likes
-        </h3>
-        <object class="social-icon" type="image/svg+xml" data="images/icon-twitter.svg">
-          Icon Facebook
-        </object>
-        <strong class="media-today__amount">
-
-          507
-        </strong>
-
-        <div class="trend trend--positive">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-up.svg">
-            Trend positive
-          </object>
-          553%
-        </div>
-      </article>
-
-      <article class="media-today">
-        <h3 class="media-today__heading">
-
-          Likes
-        </h3>
-        <object class="social-icon" type="image/svg+xml" data="images/icon-youtube.svg">
-          Icon Facebook
-        </object>
-        <strong class="media-today__amount">
-
-          107
-        </strong>
-
-        <div class="trend trend--negative">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-down.svg">
-            Trend negative
-          </object>
-          19%
-        </div>
-      </article>
-
-      <article class="media-today">
-        <h3 class="media-today__heading">
-
-          Total Views
-        </h3>
-        <object class="social-icon" type="image/svg+xml" data="images/icon-youtube.svg">
-          Icon Facebook
-        </object>
-        <strong class="media-today__amount">
-
-          1407
-        </strong>
-
-        <div class="trend trend--negative">
-          <object class="trend__icon trend__icon--positive" type="image/svg+xml" data="images/icon-down.svg">
-            Trend negative
-          </object>
-          12%
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">tomthestrom</a>.
-  </div>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>

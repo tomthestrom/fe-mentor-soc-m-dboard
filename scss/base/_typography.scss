@@ -1,26 +1,32 @@
 body {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 1.25;
-    color: var(--color-background)
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  background-color: var(--color-background);
+  color: var(--color-font);
+
+  &.dark {
+    color: var(--color-font--dark);
+  }
 }
 
 .heading-primary {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
+  color: var(--color-font-secondary);
 }
 .heading-secondary {
-    color: hsl(228,12%,44%)
+  color: inherit;
 }
 .heading-secondary--total {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .heading-secondary--today {
-    font-size: 2.4rem;
-    margin-bottom: 2.7rem;
+  font-size: 2.4rem;
+  margin-bottom: 2.7rem;
 
-    @include respond (desktop) {
-        margin-bottom: 2.4rem;
-    }
+  @include respond(desktop) {
+    margin-bottom: 2.4rem;
+  }
 }
