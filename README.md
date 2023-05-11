@@ -14,7 +14,7 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 
 ## Overview
 
-My first challenge at (Frontend Mentor)[https://www.frontendmentor.io/], to learn and refresh CSS knowledge.
+My first challenge at [Frontend Mentor](https://www.frontendmentor.io/), to learn and refresh CSS knowledge.
 
 ### The challenge
 
@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://tomthestrom-soc-m-dashboard.herokuapp.com/](https://tomthestrom-soc-m-dashboard.herokuapp.com/)
+- Live Site URL: [https://tomthestrom.github.io/fe-mentor-soc-m-dboard/](https://tomthestrom.github.io/fe-mentor-soc-m-dboard/)
 
 ## My process
 
